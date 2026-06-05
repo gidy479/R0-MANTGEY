@@ -120,7 +120,6 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext }: LightboxP
               <h2 className="font-serif text-2xl md:text-3xl font-medium tracking-wide text-white">
                 {artwork.title}
               </h2>
-              <p className="text-xs text-gray-400 font-light">Created in {artwork.year}</p>
             </div>
 
             <hr className="border-zinc-800" />

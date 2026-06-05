@@ -101,7 +101,7 @@ function BuyContent() {
             Acquisitions Portal
           </span>
           <h1 className="font-serif text-4xl md:text-7xl font-light tracking-wide text-white uppercase leading-none">
-            BUY A PAINTING
+            BUY ARTWORK
           </h1>
         </AnimateIn>
       </section>

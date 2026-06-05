@@ -76,7 +76,7 @@ export default function Navbar() {
               href="/buy"
               className="group flex items-center space-x-2 border border-gold/45 hover:border-gold px-6 py-2.5 text-xs tracking-[0.2em] uppercase font-light text-zinc-200 bg-transparent hover:bg-gold/10 transition-all duration-300"
             >
-              <span>Buy a Painting</span>
+              <span>Buy Artwork</span>
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 text-gold" />
             </Link>
           </div>

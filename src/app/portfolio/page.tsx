@@ -110,12 +110,9 @@ export default function Portfolio() {
                     </div>
 
                     {/* Standard Text Footer */}
-                    <div className="flex justify-between items-baseline pt-2 px-1">
+                    <div className="pt-2 px-1">
                       <span className="font-serif text-lg tracking-wide text-white group-hover:text-gold transition-colors duration-300">
                         {art.title}
-                      </span>
-                      <span className="text-[10px] tracking-wider text-zinc-400 font-light uppercase">
-                        {art.year}
                       </span>
                     </div>
                   </motion.div>

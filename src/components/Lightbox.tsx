@@ -48,15 +48,15 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext }: LightboxP
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-10"
+        className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md overflow-y-auto flex items-start lg:items-center justify-center p-4 md:p-10 py-16 lg:py-10"
       >
         {/* Background Click Close */}
-        <div className="absolute inset-0 cursor-default" onClick={onClose} />
+        <div className="fixed inset-0 cursor-default" onClick={onClose} />
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 z-50 text-gray-400 hover:text-gold p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer"
+          className="fixed top-4 right-4 md:top-6 md:right-6 z-50 text-gray-400 hover:text-gold p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer bg-black/40 backdrop-blur-xs lg:bg-transparent"
           aria-label="Close Lightbox"
         >
           <X size={24} />
@@ -66,7 +66,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext }: LightboxP
         {onPrev && (
           <button
             onClick={onPrev}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-50 text-gray-400 hover:text-gold p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer"
+            className="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 text-gray-400 hover:text-gold p-2 md:p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer bg-black/40 backdrop-blur-xs"
             aria-label="Previous artwork"
           >
             <ChevronLeft size={30} />
@@ -75,7 +75,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext }: LightboxP
         {onNext && (
           <button
             onClick={onNext}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-50 text-gray-400 hover:text-gold p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer"
+            className="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 text-gray-400 hover:text-gold p-2 md:p-3 hover:bg-gold/10 rounded-full transition-all duration-300 cursor-pointer bg-black/40 backdrop-blur-xs"
             aria-label="Next artwork"
           >
             <ChevronRight size={30} />
@@ -83,14 +83,14 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext }: LightboxP
         )}
 
         {/* Content Box */}
-        <div className="relative max-w-6xl w-full h-full max-h-[85vh] grid grid-cols-1 lg:grid-cols-3 gap-8 items-center z-10 pointer-events-none">
+        <div className="relative max-w-6xl w-full h-auto lg:h-full lg:max-h-[85vh] grid grid-cols-1 lg:grid-cols-3 gap-8 items-center z-10 pointer-events-none my-auto">
           {/* Image Pane */}
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 120 }}
-            className="lg:col-span-2 relative w-full h-full min-h-[300px] flex items-center justify-center pointer-events-auto"
+            className="lg:col-span-2 relative w-full h-[45vh] lg:h-full min-h-[300px] flex items-center justify-center pointer-events-auto"
           >
             <div className="relative w-full h-full max-h-[75vh] w-full">
               <Image
